@@ -1,0 +1,83 @@
+@mixin cnt($h) {
+   display: flex;
+   flex-direction: column;
+   height: $h;
+   text-align: center;
+   align-items: stretch;
+   justify-content: center;
+}
+
+@mixin tr($x, $y, $z) {
+   transform: translate3d($x, $y, $z);
+}
+
+@mixin flexorder($val) {
+   -webkit-box-ordinal-group: $val;
+   -moz-box-ordinal-group: $val;
+   -ms-flex-order: $val;
+   -webkit-order: $val;
+   order: $val;
+}
+
+@mixin skew($num) {
+   -moz-transform: skewX($num);
+   -webkit-transform: skewX($num);
+   -ms-transform: skewX($num);
+   -o-transform: skewX($num);
+   transform: skewX($num);
+}
+
+@mixin flexbox() {
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   font-size: 0;
+}
+
+@mixin anim($time, $delay) {
+   -moz-transition: all $time ease $delay;
+   -webkit-transition: all $time ease $delay;
+   -ms-transition: all $time ease $delay;
+   -o-transition: all $time ease $delay;
+   transition: all $time ease $delay;
+}
+
+@mixin scale($num) {
+   -moz-transform: scale($num);
+   -webkit-transform: scale($num);
+   -ms-transform: scale($num);
+   -o-transform: scale($num);
+   transform: scale($num);
+}
+
+@mixin rotate($deg) {
+   -moz-transform: rotate($deg);
+   -ms-transform: rotate($deg);
+   -webkit-transform: rotate($deg);
+   -o-transform: rotate($deg);
+   transform: rotate($deg);
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+//Adaptive font
+@mixin adaptiv-font($pcSize, $mobSize, $maxSize) {
+   $addSize: $pcSize - $mobSize;
+   @if $maxSize == 1 {
+      font-size: $pcSize + px;
+      @media (max-width: #{$maxWidthContainer + px}) {
+         font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+      }
+   } @else {
+      font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+   }
+}

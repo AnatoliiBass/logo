@@ -1,0 +1,159 @@
+.footer {
+   &__body {
+      @media (min-width: $md2+px) {
+         display: flex;
+         margin: 0 -15px;
+      }
+   }
+
+   &__column {
+      @media (min-width: $md2+px) {
+         padding: 0 15px;
+         flex: 0 1 50%;
+      }
+      margin: 0px 0px 25px 0px;
+      &:first-child {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__payments {
+      img {
+         max-width: 100%;
+      }
+      @media (max-width: 560px) {
+         text-align: center;
+      }
+   }
+
+   &__bottom {
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #dadada;
+      @media (min-width: 560px) {
+         text-align: left;
+         display: flex;
+      }
+   }
+
+   &__copy {
+      flex: 1 1 auto;
+      color: #999999;
+      font-size: 12px;
+      font-weight: 300;
+      @media (max-width: 560px) {
+         margin: 0px 0px 10px 0px;
+      }
+   }
+}
+
+.block-footer {
+   padding: 0px 0px 20px 0px;
+   text-align: center;
+   @media (min-width: 560px) {
+      text-align: left;
+      display: flex;
+      flex: 1 1 auto;
+   }
+   &__column {
+      &:first-child {
+         flex: 0 0 165px;
+      }
+      &:last-child {
+         @media (min-width: 560px) {
+            padding: 0px 0px 0px 45px;
+         }
+         flex: 1 1 auto;
+      }
+   }
+
+   &__logo {
+      display: inline-block;
+      margin: 0px 0px 30px 0px;
+   }
+
+   &__phones {
+      padding: 0px 0px 0px 15px;
+      @media (min-width: 560px) {
+         background: url("../img/icons/footer/phone.png") left no-repeat;
+         padding: 0px 0px 0px 35px;
+      }
+      p {
+         margin: 0px 0px 10px 0px;
+         &:last-child {
+            margin: 0px 0px 0px 0px;
+         }
+      }
+      @media (max-width: 560px) {
+         font-size: 18px;
+         margin: 0px 0px 30px 0px;
+      }
+   }
+
+   &__phone {
+      font-weight: 900;
+      color: #333333;
+   }
+
+   &__delivery {
+      @media (max-width: 560px) {
+         text-align: center;
+      }
+   }
+}
+.delivery-footer {
+   &__title {
+      color: #999999;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.35px;
+      margin: 0px 0px 10px 0px;
+   }
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0 -15px;
+      @media (max-width: 560px) {
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      padding: 15px;
+      cursor: pointer;
+   }
+}
+.widgets-footer {
+   display: flex;
+   margin: 0 -15px;
+   @media (min-width: $md2+px) {
+      justify-content: flex-end;
+   }
+   @media (max-width: 560px) {
+      display: block;
+      text-align: center;
+   }
+   &__column {
+      padding: 0 15px;
+      img {
+         max-width: 100%;
+      }
+   }
+}
+.social-footer {
+   display: flex;
+   align-items: center;
+   &__item {
+      margin: 0px 0px 0px 10px;
+   }
+   @media (max-width: 560px) {
+      justify-content: center;
+      &__item {
+         margin: 0 5px;
+      }
+   }
+}

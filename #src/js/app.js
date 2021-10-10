@@ -1,0 +1,13 @@
+@@include('functions/check-device.js');
+@@include('functions/da.js');
+@@include('functions/webp.js');
+@@include('functions/toggle.js');
+@@include('functions/burger-and-ddm.js');
+@@include('functions/checkbox.js');
+@@include('functions/sub-menu.js');
+@@include('functions/ibg.js');
+@@include('functions/build-slider.js');
+@@include('functions/mouseenter.js');
+@@include('functions/spoller.js');
+@@include('functions/quantity.js');
+@@include('functions/tabs.js');
